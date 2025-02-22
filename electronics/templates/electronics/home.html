@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurabh's Shopping | The Ultimate Destination</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: rgba(20, 20, 40, 0.9);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .navbar .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff9900;
+            text-transform: uppercase;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 20px;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 25px;
+            border: none;
+        }
+
+        .cart {
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            width: 100%;
+            height: 60vh;
+            background: url('https://source.unsplash.com/1600x900/?shopping,mall') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.7);
+        }
+
+        .hero span {
+            color: #ff9900;
+        }
+
+        .shop-now {
+            background: #ff9900;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .shop-now:hover {
+            background: #e68a00;
+            transform: scale(1.1);
+        }
+
+        /* Product Section */
+        .product-section {
+            padding: 40px 5%;
+        }
+
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .price {
+            font-size: 22px;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 20px;
+            background: #ff9900;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e68a00;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Saurabh's Shopping</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products...">
+        </div>
+        <a href="#">Login</a>
+        <a href="#">Categories</a>
+        <a href="#">Orders</a>
+        <i class="fas fa-shopping-cart cart"></i>
+    </div>
+
+    <div class="hero">
+        Welcome to <span>Saurabh's Shopping</span> – The Ultimate Destination!
+        <button class="shop-now">Shop Now</button>
+    </div>
+
+    <div class="product-section">
+        <div class="product-title">Top Picks for You</div>
+        <div class="product-grid">
+            <div class="product-card"><img src="https://source.unsplash.com/400x400/?macbook" alt="MacBook"><h3>MacBook Pro</h3><p class="price">₹2,49,999</p><button class="btn">Add to Cart</button></div>
+            <div class="product-card"><img src="https://source.unsplash.com/400x400/?sports" alt="Sports"><h3>Sports Equipment</h3><p class="price">₹14,999</p><button class="btn">Add to Cart</button></div>
+            <div class="product-card"><img src="https://source.unsplash.com/400x400/?mobile" alt="Mobile"><h3>Latest Smartphone</h3><p class="price">₹79,999</p><button class="btn">Add to Cart</button></div>
+            <div class="product-card"><img src="https://source.unsplash.com/400x400/?headphones" alt="Headphones"><h3>Wireless Headphones</h3><p class="price">₹9,999</p><button class="btn">Add to Cart</button></div>
+        </div>
+    </div>
+</body>
+</html>
