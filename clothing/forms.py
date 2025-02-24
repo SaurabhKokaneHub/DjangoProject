@@ -6,3 +6,5 @@ class ProductForm (forms.ModelForm):
         model = Product
         fields =['name','size','colour','price','image']
         
+
+      
