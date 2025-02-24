@@ -186,8 +186,10 @@
     <div class="header">
         <div>Saurabh's Shopping - The Ultimate E-Commerce Platform</div>
         <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Search for products...">
-        </div>
+           
+            
+
+          </div>
         <div class="icons">
             <span>👤</span>
             <span>🛒</span>
@@ -214,19 +216,18 @@
             </form>
         </div>
 
+        
         <!-- Product Listings -->
         <div class="product-container">
-            {% for product in products %}
+            {% for product in pro_img %}
                 <div class="product">
                     <img src="{{ product.image.url }}" alt="{{ product.name }}">
                     <h3>{{ product.name }}</h3>
                     <p><strong>Size:</strong> {{ product.get_size_display }}</p>
                     <p><strong>Colour:</strong> {{ product.get_colour_display }}</p>
                     <p><strong>Price:</strong> ₹{{ product.price|floatformat:2 }}</p>
-                    <div class="buttons">
-                        <button class="cart-btn" onclick="setProduct('{{ product.id }}', '{{ product.name }}')">Add to Cart</button>
-                        <button class="buy-btn" onclick="setProduct('{{ product.id }}', '{{ product.name }}')">Buy Now</button>
-                    </div>
+                    <a href="{% url 'edit_product' product.id %}"class="btn btn-primary">Edit</a>
+                    <a href="{% url 'delete_product' product.id %}"class="btn btn-danger">Delete</a>
                 </div>
             {% endfor %}
         </div>
